@@ -8,6 +8,6 @@ import { CommentsModule } from './comments/comments.module';
 @Module({
   imports: [UsersModule,MongooseModule.forRoot('mongodb+srv://arjun:arjun@cluster.mjlbycp.mongodb.net/threads?retryWrites=true&w=majority&appName=Cluster'), CommentsModule],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService, UsersModule],
 })
 export class AppModule {}
